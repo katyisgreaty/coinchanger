@@ -50,6 +50,14 @@ namespace CoinComboMaker.Objects
       {
         dime = centAmount / 10;
       }
+      else if (centAmount % 5 == 0)
+      {
+        nickel = centAmount / 5;
+      }
+      else if (centAmount % 1 == 0)
+      {
+        penny = centAmount;
+      }
 
       Dictionary<string, int> newDictionary = new Dictionary<string, int>{};
       newDictionary.Add("quarters", quarter);
