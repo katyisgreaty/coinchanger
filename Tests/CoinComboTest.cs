@@ -106,5 +106,25 @@ namespace CoinComboMaker
 
       Assert.Equal(testNumber, output);
     }
+
+    [Fact]
+    public void MakeChange_ForTwentyReturnsTwoDimes_twoDimes()
+    {
+      //arrange
+      int inputtedNumber = 20;
+      CoinCombo testCoinCombo = new CoinCombo(inputtedNumber);
+
+      //act
+      Dictionary<string, int> output = testCoinCombo.MakeChange();
+
+      //assert
+      Dictionary<string, int> testNumber = new Dictionary<string, int>{};
+      testNumber.Add("quarters", 0);
+      testNumber.Add("dimes", 2);
+      testNumber.Add("nickels", 0);
+      testNumber.Add("pennies", 0);
+
+      Assert.Equal(testNumber, output);
+    }
   }
 }
