@@ -26,38 +26,14 @@ namespace CoinComboMaker.Objects
       int penny = 0;
       int centAmount = GetCentAmount();
 
-      if (centAmount == 1)
-      {
-        penny = 1;
-      }
-      else if (centAmount == 5)
-      {
-        nickel = 1;
-      }
-      else if (centAmount == 10)
-      {
-        dime = 1;
-      }
-      else if (centAmount == 25)
-      {
-        quarter = 1;
-      }
-      else if (centAmount % 25 == 0)
-      {
-        quarter = centAmount / 25;
-      }
-      else if (centAmount % 10 == 0)
-      {
-        dime = centAmount / 10;
-      }
-      else if (centAmount % 5 == 0)
-      {
-        nickel = centAmount / 5;
-      }
-      else if (centAmount % 1 == 0)
-      {
-        penny = centAmount;
-      }
+      quarter = centAmount / 25;
+      centAmount -= (quarter * 25);
+      dime = centAmount / 10;
+      centAmount -= dime * 10;
+      nickel = centAmount / 5;
+      centAmount -= nickel * 5;
+      penny = centAmount;
+
 
       Dictionary<string, int> newDictionary = new Dictionary<string, int>{};
       newDictionary.Add("quarters", quarter);

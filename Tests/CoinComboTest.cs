@@ -146,5 +146,25 @@ namespace CoinComboMaker
 
       Assert.Equal(testNumber, output);
     }
+
+    [Fact]
+    public void MakeChange_ForRandomCentAmountReturnsAppropriateCoins_appropriateCoins()
+    {
+      //arrange
+      int inputtedNumber = 69;
+      CoinCombo testCoinCombo = new CoinCombo(inputtedNumber);
+
+      //act
+      Dictionary<string, int> output = testCoinCombo.MakeChange();
+
+      //assert
+      Dictionary<string, int> testNumber = new Dictionary<string, int>{};
+      testNumber.Add("quarters", 2);
+      testNumber.Add("dimes", 1);
+      testNumber.Add("nickels", 1);
+      testNumber.Add("pennies", 4);
+
+      Assert.Equal(testNumber, output);
+    }
   }
 }
