@@ -38,6 +38,15 @@ namespace CoinComboMaker.Objects
       {
         dime = 1;
       }
+      else if (centAmount == 25)
+      {
+        quarter = 1;
+      }
+      else if (centAmount % 25 == 0)
+      {
+        quarter = centAmount/25;
+      }
+
       Dictionary<string, int> newDictionary = new Dictionary<string, int>{};
       newDictionary.Add("quarters", quarter);
       newDictionary.Add("dimes", dime);
