@@ -2,7 +2,7 @@
 
 #### _Tell user which coins make up the amount they want_
 
-#### By _**Alexandra Holcombe && Katy Daviscourt**_
+#### By _**Alexandra Holcombe & Katy Daviscourt**_
 
 ## Description
 
