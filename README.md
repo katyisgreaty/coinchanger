@@ -1,6 +1,6 @@
 # Coin Combo Teller
 
-#### _Tell user which coins make up the amount they want_
+#### _Tell user which coins make up the amount they want_ 
 
 #### By _**Alexandra Holcombe & Katy Daviscourt**_
 
